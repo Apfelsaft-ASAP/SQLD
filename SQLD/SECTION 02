@@ -1,0 +1,18 @@
+### Oracle Database 사용
+
+## 데이터베이스 관리 시스템
+
+SQL을 실제로 사용하려면 데이터베이스 관리 시스템(DataBase Management System)을 설치해야 한다. 데이터베이스 관리 시스템은 간단하게 DBMS라고 한다.
+DBMS으 ㅣ종류는 Oracle, Sybase(사이베이스), DB2, MySQL, MS-SQL등 다양하다.
+DBMS 중에서 대기업에서 가장 많이 사용하는 DBMS는 Oracle이다. Oracle을 알고 있다면, Database를 알고 있다고 인식된다.
+
+SQL 공부를 위해서 어떤 DBMS를 설치해도 관계없다. 모든 DBMS는 SQL표준을 준수하기 때문이다.
+단,  DBMS별로 자신만 제공하는 기능이 있다. 그래서 모든 DBMS는 표준을 준수하지만, 추가적인 기능은 다르다. SQLD를 공부할 때는 Oracle 데이터베이스를 기준으로 공부하는 것이 좋다.
+
+SQLD에 대한 실습은 Oracle XE버전을 통해 진행 될 예정이다.
+
+## Oracle XE 설치
+
+> Oracle 다운로드 URL
+https://www.oracle.com/kr/database/technologies/xe-downloads.html
+setup.exe 실행 -> 설치후 SQL Plus실행 -> 로그인 해서 정상적으로 연결되면 Oracle XE 설치는 정상적으로 완료된 것이다.
