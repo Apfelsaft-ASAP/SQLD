@@ -16,3 +16,31 @@ SQLD에 대한 실습은 Oracle XE버전을 통해 진행 될 예정이다.
 > Oracle 다운로드 URL
 https://www.oracle.com/kr/database/technologies/xe-downloads.html
 setup.exe 실행 -> 설치후 SQL Plus실행 -> 로그인 해서 정상적으로 연결되면 Oracle XE 설치는 정상적으로 완료된 것이다.
+
+## Oracle 데이터베이스 연결 상태 확인하기
+Oracle XE를 설치하면 자동으로 TNSListener가 설치되는데 이상유무를 확인하는 방법은 명령프롬포트에서 "netstat"를 실행하면 된다.
+
+Oralce 데이터베이스는 통신을 위해서 1521포트를 사용한다.
+
+Oracle 데이터베이스 연결 상태를 확인하는 다른 방법은 tnsping을 실행하면 보다 분명하게 확인이 가능하다. tnsping 127.0.0.1
+
+## Oracle 데이터베이스 사용하기
+"SQL Plus"를 실행하고 connect system/[설정한 패스워드] 를 입력하면 system사용자로 데이터베이스를 연결한다.
+
+SQL문은 작성하다 오타가 발생하면 수정하기 어려운 문제가 있는데 SQL Plus 프로그램에서는 메모장을 사용해서 쉽게 SQL문을 작성하거나 수정할 수 있다.
+
+SQL Plus에서 메모장을 사용하기 위해서는 먼저 임의의 SQL문을 하나 실행해야 한다. 그래야 최근에 실행된 SQL문을 "afiedt.but"에 저장한다. 그 다음
+edit라고 입력하면 최근 SQL문을 보여주기 위해서 메모장이 실행된다.
+
+메모장에서 작성된 SQL문을 실행하기 위해서는 "/"를 입력하면 된다.
+
+주의할점은 메모장에서 SQL문을 작성할 때는 SQL문 맨 뒤에 세미콜론을 붙이면 안된다.
+
+## Oracle 데이터베이스 사용자 생성하기
+
+학습을 위해 먼저 Oracle 데이터베이스를 테스트할 Oracle 사용자를 생성해야 한다.
+Oracle 사용자는 "Create user"문을 사용해서 생성한다.
+> Create user [UserId] identified by [Password]
+
+Oracle을 사용하기 위해서는 권한이 있어야 하므로 Role이라는 것을 사용해서 한 번에 DBA 권한을 부여할 수 있다.
+> Grant dba to [UserId]
